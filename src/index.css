@@ -1,13 +1,143 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.table1 {
+  border: 2px solid black;
+  height: 100px;
+  width: 400px;
+  text-align: center;
+  font-size: larger;
+  color: var(--lg);
+  box-shadow: 1px 1px 1px var(--p) inset;
+  border-radius: 10px;
+}
+.btn {
+  height: 30px;
+  width: 80px;
+  font-size: 20px;
+  border-radius: 8px;
+  margin: 10px;
+}
+.btn:hover {
+  background-color: darkgray;
+  cursor: pointer;
+}
+.tbl {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root {
+  --dg: #101212;
+  --lg: #c0b0b5;
+  --g: #0f6;
+  --c: #0ff;
+  --m: #f03;
+  --p: #0ff;
+}
+
+@keyframes colorshift {
+  0% {
+    --p: var(--g);
+  }
+  50% {
+    --p: var(--c);
+  }
+  100% {
+    --p: var(--m);
+  }
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  background-color: var(--dg);
+  font-family: "Aldrich", sans-serif;
+  font-color: var(--lg);
+  transition: color 1s;
+  animation: colorshift 5s infinite;
+  animation-direction: alternate;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.float {
+  margin: auto;
+}
+
+.fixed {
+  width: 100px;
+  height: 50px;
+  background-color: transparent;
+}
+
+.stack-g {
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 1px var(--p), 4px 4px 0 var(--dg), 6px 6px 1px var(--p);
+}
+
+input,
+button {
+  display: block;
+  border-radius: 5px;
+  border-style: none;
+  padding: 5px;
+  margin: 5px;
+  background-color: var(--dg) !important;
+  box-shadow: 1px 1px 1px var(--p) inset;
+  font-size: 1.5em;
+  font-family: "Aldrich", sans-serif;
+  font-weight: bold;
+  color: var(--lg);
+  outline: none;
+  /*   text-shadow: 2px 2px 1px var(--p); */
+}
+
+input:hover,
+button:hover {
+  box-shadow: 2px 2px 2px var(--p) inset;
+}
+
+button {
+  display: inline-block;
+}
+
+.error-text {
+  text-shadow: 1px 1px 2px #f00;
+}
+
+.inline {
+  display: inline-block;
+  vertical-align: middle;
+  align-contet: center;
+}
+
+.divider {
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: var(--dg);
+  height: 100px;
+  box-shadow: 2px 2px 1px var(--p);
+}
+.login {
+  color: var(--lg);
+  text-align: center;
 }
